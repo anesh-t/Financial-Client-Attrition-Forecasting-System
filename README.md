@@ -1,9 +1,7 @@
 # 💳 Financial Client Attrition Forecasting System  
 **Author:** Anesh Thangaraj  
-**Course:** Machine Learning II  
 **Institution:** The George Washington University – MS in Business Analytics  
-**Term:** Spring 2025  
-
+ 
 ---
 
 ## 📘 Overview  
