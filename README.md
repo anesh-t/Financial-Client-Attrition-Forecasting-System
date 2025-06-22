@@ -1,5 +1,5 @@
 # Financial Client Attrition Forecasting System
-# Author: Anesh Thangaraj
+## Author: Anesh Thangaraj
 ## Project Overview  
 This project is designed to forecast the likelihood of financial clients discontinuing their relationship with a banking institution. By analyzing customer profiles, the model aims to proactively identify at-risk individuals. Client attrition poses a direct risk to revenue and operational continuity, making early prediction critical for financial organizations.
 
@@ -93,13 +93,6 @@ This project applies machine learning to forecast financial client behavior base
 ## Resources  
 - `Readme`  
 - `Jupyter Notebook` (Modeling and EDA)
-
----
-
-## Repository Stats  
-- **Stars:** ⭐ 0  
-- **Watchers:** 👀 1  
-- **Forks:** 🍴 0
 
 ---
 
