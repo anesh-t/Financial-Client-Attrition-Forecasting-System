@@ -1,92 +1,109 @@
-# 💳 Financial Client Attrition Forecasting System  
-**Author:** Anesh Thangaraj  
-**Institution:** The George Washington University – MS in Business Analytics  
- 
----
+# Financial Client Attrition Forecasting System
+# Author: Anesh Thangaraj
+## Project Overview  
+This project is designed to forecast the likelihood of financial clients discontinuing their relationship with a banking institution. By analyzing customer profiles, the model aims to proactively identify at-risk individuals. Client attrition poses a direct risk to revenue and operational continuity, making early prediction critical for financial organizations.
 
-## 📘 Overview  
-This project addresses customer attrition challenges in the banking sector by:
-
-- Predicting which clients are likely to leave the bank (churn)
-- Comparing multiple supervised machine learning models
-- Using model results to guide proactive client retention strategies
-
-The forecasting is based on structured demographic and financial data, and the goal is to reduce revenue loss by accurately identifying at-risk clients.
+The project uses machine learning models to generate accurate churn predictions, allowing institutions to take proactive steps toward customer retention and long-term profitability.
 
 ---
 
-## 🔍 Business Objective  
-To enhance customer retention efforts by:
-
-- Forecasting churn probability with high accuracy  
-- Informing marketing, outreach, and retention strategies with model-driven insights  
+## About the Dataset  
+The dataset is sourced from Kaggle and comprises 10,000 rows and 14 columns. Each row represents a unique customer with demographic and financial information. The goal is to predict whether a customer will leave the institution based on these features.
 
 ---
 
-## 🧠 Modeling Approach  
+## Key Features
 
-**Data:**  
-- Source: Public dataset (10,000 records)  
-- Data type: Structured, customer-level data  
-- Features: Demographics + Financial Metrics + Service Interactions  
+**Independent Variables (Predictors):**
+- **Demographics:**  
+  - Age  
+  - Gender  
+  - Country of Residence (Geography)
 
-**Feature Engineering:**  
-- One-hot encoding for categorical variables (e.g., geography, gender)  
-- Standardization for continuous variables  
-- Derived features: tenure bucket, customer engagement score  
+- **Financial Metrics:**  
+  - Credit Score  
+  - Bank Balance  
+  - Estimated Salary
 
----
+- **Service & Interaction Details:**  
+  - Number of Products Used  
+  - Tenure with the Bank (in years)  
+  - Active Membership Status  
+  - Credit Card Ownership  
 
-## 🤖 Models Compared  
-
-| Model               | Accuracy | Precision | Recall | ROC-AUC |
-|--------------------|----------|-----------|--------|---------|
-| Logistic Regression| 81.5%    | 79.4%     | 74.3%  | 0.84    |
-| Decision Tree      | 79.2%    | 75.1%     | 72.0%  | 0.81    |
-| Random Forest      | 84.3%    | 82.1%     | 78.7%  | 0.87    |
-| Gradient Boosting  | 85.1%    | 83.2%     | 79.6%  | 0.88    |
-| K-Nearest Neighbors| 76.4%    | 71.3%     | 68.9%  | 0.78    |
-| Neural Network     | 83.6%    | 80.5%     | 76.1%  | 0.86    |
+**Target Variable:**
+- **Exited:**  
+  Binary indicator showing if the customer exited the bank (1 = Yes, 0 = No)
 
 ---
 
-## 🏆 Insights & Recommendation  
+## Data Dictionary
 
-- **Gradient Boosting** delivered the best overall performance (highest ROC-AUC + solid accuracy).  
-- **Logistic Regression** remains a reliable and interpretable baseline.  
-- Ensemble models significantly outperformed simpler classifiers on this dataset.  
-- Churners typically had **lower tenure**, **fewer products**, and were **less active**.  
-
----
-
-## 🛠 Implementation Tips  
-
-- Deploy the Gradient Boosting model in CRM systems  
-- Prioritize high-risk clients for retention campaigns  
-- Monitor key churn indicators: inactivity, low product use, declining balances  
-- Retrain the model quarterly with updated transaction and behavioral data  
-
----
-
-## ⚠️ Limitations  
-
-- Historical data only—no transactional or behavioral trends over time  
-- No feedback loop from actual retention efforts (no intervention data)  
-- Cost of misclassification not integrated into the model (business proxy needed)  
+| Column Name       | Description                                                  |
+|-------------------|--------------------------------------------------------------|
+| RowNumber         | Row index in the dataset                                     |
+| CustomerId        | Unique identifier for each customer                          |
+| Surname           | Last name of the customer                                    |
+| CreditScore       | Credit score of the customer                                 |
+| Geography         | Customer’s country                                           |
+| Age               | Age of the customer                                          |
+| Tenure            | Years of relationship with the bank                          |
+| Balance           | Account balance in USD                                       |
+| NumOfProducts     | Number of bank products used by the customer                 |
+| HasCrCard         | 1 if customer holds a credit card, 0 otherwise               |
+| IsActiveMember    | 1 if customer is active, 0 otherwise                         |
+| EstimatedSalary   | Annual estimated salary (USD)                                |
+| Exited            | 1 if the customer churned, 0 if retained                     |
 
 ---
 
-## 🚀 Future Scope  
+## Objective and Approach
 
-- Incorporate time-series trends or customer activity logs  
-- Use SHAP for interpretable churn factors per individual  
-- Integrate with financial call center logs or CRM interaction histories  
-- Extend to multi-class models (e.g., high, medium, low churn risk)  
+**Objective:**  
+To build a machine learning model that predicts client churn with high accuracy, helping the bank retain valuable customers.
+
+**Approach:**  
+- **Data Preprocessing:**  
+  Cleaning data and addressing missing or inconsistent values.
+
+- **Exploratory Data Analysis (EDA):**  
+  Uncovering trends and identifying key variables impacting churn.
+
+- **Feature Engineering:**  
+  Enhancing or transforming features to boost model performance.
+
+- **Modeling:**  
+  Applying algorithms like Logistic Regression, Decision Trees, Random Forest, and Gradient Boosting.
+
+- **Evaluation:**  
+  Using metrics such as Accuracy, Precision, Recall, F1 Score, and ROC-AUC to assess model quality.
 
 ---
 
-## 📬 Contact  
+## Conclusion  
+An effective churn prediction model empowers financial institutions to identify clients likely to leave and engage them with personalized retention strategies. This leads to improved client satisfaction, reduced attrition, and enhanced financial performance.
 
-**Anesh Thangaraj**  
-✉️ aneshraj14@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/yourprofile)
+---
+
+## About  
+This project applies machine learning to forecast financial client behavior based on demographic and account-level features such as age, balance, credit score, product usage, and country of residence.
+
+---
+
+## Resources  
+- `Readme`  
+- `Jupyter Notebook` (Modeling and EDA)
+
+---
+
+## Repository Stats  
+- **Stars:** ⭐ 0  
+- **Watchers:** 👀 1  
+- **Forks:** 🍴 0
+
+---
+
+## Languages  
+- **Jupyter Notebook** – 100%
+
+---
